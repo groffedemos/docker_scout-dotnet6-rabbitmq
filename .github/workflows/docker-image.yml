@@ -34,5 +34,5 @@ jobs:
         command: cves
         image: "image-to-scan:test"
         sarif-file: tests.sarif
-        exit-code: 2
+        exit-code: true
         only-severities: critical,high
