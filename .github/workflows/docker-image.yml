@@ -18,6 +18,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Teste
+      run: echo ${{ env:IMAGE_DOCKERHUB }}
     - uses: actions/checkout@v3
     - name: Build de imagem
       run: |
