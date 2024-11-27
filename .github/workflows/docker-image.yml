@@ -32,7 +32,7 @@ jobs:
       uses: docker/scout-action@v1.15.1
       with:
         command: cves
-        image: image-to-scan-test:${{ GITHUB_RUN_NUMBER  }}
+        image: "image-to-scan-test:$GITHUB_RUN_NUMBER"
         sarif-file: tests.sarif
         exit-code: 2
         only-severities: critical,high
