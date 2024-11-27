@@ -19,7 +19,7 @@ jobs:
 
     steps:
     - name: Teste
-      run: echo ${{ env:IMAGE_DOCKERHUB }}
+      run: echo ${{ env.IMAGE_DOCKERHUB }}
     - uses: actions/checkout@v3
     - name: Build de imagem
       run: |
