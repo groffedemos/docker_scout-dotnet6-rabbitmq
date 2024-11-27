@@ -34,7 +34,7 @@ jobs:
       uses: docker/scout-action@v1.15.1
       with:
         command: cves
-        image: "image-to-scan:test"
+        image: ${{ env.IMAGE_DOCKERHUB }}
         sarif-file: scan-image.sarif
         exit-code: true
         only-severities: critical,high
