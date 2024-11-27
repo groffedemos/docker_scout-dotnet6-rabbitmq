@@ -18,13 +18,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Teste
-      run: echo ${{ env.IMAGE_DOCKERHUB }}
     - uses: actions/checkout@v3
     - name: Build de imagem
       run: |
         cd ${{ env.DIR_WEBAPP }}
-        docker build . -t image-to-scan:test --no-cache
+        docker build . -t {{ env.IMAGE_DOCKERHUB}} --no-cache
     - name: Login no Docker Hub
       uses: docker/login-action@v3.3.0
       with:
