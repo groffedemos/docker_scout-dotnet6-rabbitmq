@@ -33,9 +33,15 @@ jobs:
       with:
         command: cves
         image: "image-to-scan:test"
-        sarif-file: tests.sarif
+        sarif-file: scan-image.sarif
         exit-code: true
         only-severities: critical,high
     - name: Exibir arquivos no diretorio-raiz apos execucao do Docker Scout
       run: ls
+      if: always()
+    - name: Upload SARIF file
+      uses: github/codeql-action/upload-sarif@v3
+      with:
+        sarif_file: scan-image.sarif
+        category: docker-scout
       if: always()
