@@ -36,3 +36,6 @@ jobs:
         sarif-file: tests.sarif
         exit-code: true
         only-severities: critical,high
+    - name: Exibir arquivos no diretorio-raiz apos execucao do Docker Scout
+      run: ls
+      if: always()
