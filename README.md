@@ -1,2 +1,2 @@
 # docker_scout-dotnet6-rabbitmq
-Testes com Docker Scout.
+Testes com Docker Scout..
